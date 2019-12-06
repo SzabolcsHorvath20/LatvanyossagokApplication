@@ -10,22 +10,22 @@ namespace LatvanyossagokApplication
     {
         private int id;
         private string nev;
-        private int ar;
+        private int lakossag;
 
-        public Varos(int id, string nev, int ar)
+        public Varos(int id, string nev, int lakossag)
         {
             this.id = id;
             this.nev = nev;
-            this.ar = ar;
+            this.lakossag = lakossag;
         }
 
         public int Id { get => id; set => id = value; }
         public string Nev { get => nev; set => nev = value; }
-        public int Ar { get => ar; set => ar = value; }
+        public int Ar { get => lakossag; set => lakossag = value; }
 
         public override string ToString()
         {
-            return nev;
+            return nev + " Lakosság: " + lakossag + " fő";
         }
     }
 }
