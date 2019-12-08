@@ -21,7 +21,7 @@ namespace LatvanyossagokApplication
 
         public int Id { get => id; set => id = value; }
         public string Nev { get => nev; set => nev = value; }
-        public int Ar { get => lakossag; set => lakossag = value; }
+        public int Lakossag { get => lakossag; set => lakossag = value; }
 
         public override string ToString()
         {

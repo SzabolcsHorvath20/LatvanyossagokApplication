@@ -43,15 +43,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbVarosok = new System.Windows.Forms.ListBox();
-            this.tb_varos_delete = new System.Windows.Forms.TextBox();
             this.btn_varos_delete = new System.Windows.Forms.Button();
             this.lbLatvanyossagok = new System.Windows.Forms.ListBox();
             this.tbModositVarosNev = new System.Windows.Forms.TextBox();
             this.btnModosit = new System.Windows.Forms.Button();
             this.nudModositVarosLakossag = new System.Windows.Forms.NumericUpDown();
+            this.tbLatvanyossagLeirasModosit = new System.Windows.Forms.TextBox();
+            this.btnLatvanyossagModosit = new System.Windows.Forms.Button();
+            this.nudLatvanyossagArModosit = new System.Windows.Forms.NumericUpDown();
+            this.tbLatvanyossagNevModosit = new System.Windows.Forms.TextBox();
+            this.btnLatvanyossagDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.varos_lakossag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.latvanyossag_ar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudModositVarosLakossag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLatvanyossagArModosit)).BeginInit();
             this.SuspendLayout();
             // 
             // varos_nev
@@ -190,16 +195,9 @@
             this.lbVarosok.TabIndex = 14;
             this.lbVarosok.SelectedIndexChanged += new System.EventHandler(this.lbVarosok_SelectedIndexChanged);
             // 
-            // tb_varos_delete
-            // 
-            this.tb_varos_delete.Location = new System.Drawing.Point(9, 391);
-            this.tb_varos_delete.Name = "tb_varos_delete";
-            this.tb_varos_delete.Size = new System.Drawing.Size(100, 20);
-            this.tb_varos_delete.TabIndex = 15;
-            // 
             // btn_varos_delete
             // 
-            this.btn_varos_delete.Location = new System.Drawing.Point(115, 391);
+            this.btn_varos_delete.Location = new System.Drawing.Point(115, 418);
             this.btn_varos_delete.Name = "btn_varos_delete";
             this.btn_varos_delete.Size = new System.Drawing.Size(85, 23);
             this.btn_varos_delete.TabIndex = 16;
@@ -214,19 +212,20 @@
             this.lbLatvanyossagok.Name = "lbLatvanyossagok";
             this.lbLatvanyossagok.Size = new System.Drawing.Size(237, 225);
             this.lbLatvanyossagok.TabIndex = 17;
+            this.lbLatvanyossagok.SelectedIndexChanged += new System.EventHandler(this.lbLatvanyossagok_SelectedIndexChanged);
             // 
             // tbModositVarosNev
             // 
-            this.tbModositVarosNev.Location = new System.Drawing.Point(9, 418);
+            this.tbModositVarosNev.Location = new System.Drawing.Point(9, 391);
             this.tbModositVarosNev.Name = "tbModositVarosNev";
             this.tbModositVarosNev.Size = new System.Drawing.Size(100, 20);
             this.tbModositVarosNev.TabIndex = 18;
             // 
             // btnModosit
             // 
-            this.btnModosit.Location = new System.Drawing.Point(206, 418);
+            this.btnModosit.Location = new System.Drawing.Point(9, 418);
             this.btnModosit.Name = "btnModosit";
-            this.btnModosit.Size = new System.Drawing.Size(57, 23);
+            this.btnModosit.Size = new System.Drawing.Size(100, 23);
             this.btnModosit.TabIndex = 20;
             this.btnModosit.Text = "Módosít";
             this.btnModosit.UseVisualStyleBackColor = true;
@@ -234,22 +233,77 @@
             // 
             // nudModositVarosLakossag
             // 
-            this.nudModositVarosLakossag.Location = new System.Drawing.Point(115, 418);
+            this.nudModositVarosLakossag.Location = new System.Drawing.Point(115, 392);
+            this.nudModositVarosLakossag.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.nudModositVarosLakossag.Name = "nudModositVarosLakossag";
             this.nudModositVarosLakossag.Size = new System.Drawing.Size(85, 20);
             this.nudModositVarosLakossag.TabIndex = 21;
+            // 
+            // tbLatvanyossagLeirasModosit
+            // 
+            this.tbLatvanyossagLeirasModosit.Location = new System.Drawing.Point(502, 188);
+            this.tbLatvanyossagLeirasModosit.Name = "tbLatvanyossagLeirasModosit";
+            this.tbLatvanyossagLeirasModosit.Size = new System.Drawing.Size(163, 20);
+            this.tbLatvanyossagLeirasModosit.TabIndex = 25;
+            // 
+            // btnLatvanyossagModosit
+            // 
+            this.btnLatvanyossagModosit.Location = new System.Drawing.Point(502, 243);
+            this.btnLatvanyossagModosit.Name = "btnLatvanyossagModosit";
+            this.btnLatvanyossagModosit.Size = new System.Drawing.Size(163, 23);
+            this.btnLatvanyossagModosit.TabIndex = 24;
+            this.btnLatvanyossagModosit.Text = "Módosít";
+            this.btnLatvanyossagModosit.UseVisualStyleBackColor = true;
+            this.btnLatvanyossagModosit.Click += new System.EventHandler(this.btnLatvanyossagModosit_Click);
+            // 
+            // nudLatvanyossagArModosit
+            // 
+            this.nudLatvanyossagArModosit.Location = new System.Drawing.Point(502, 217);
+            this.nudLatvanyossagArModosit.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
+            this.nudLatvanyossagArModosit.Name = "nudLatvanyossagArModosit";
+            this.nudLatvanyossagArModosit.Size = new System.Drawing.Size(163, 20);
+            this.nudLatvanyossagArModosit.TabIndex = 23;
+            // 
+            // tbLatvanyossagNevModosit
+            // 
+            this.tbLatvanyossagNevModosit.Location = new System.Drawing.Point(502, 160);
+            this.tbLatvanyossagNevModosit.Name = "tbLatvanyossagNevModosit";
+            this.tbLatvanyossagNevModosit.Size = new System.Drawing.Size(163, 20);
+            this.tbLatvanyossagNevModosit.TabIndex = 22;
+            // 
+            // btnLatvanyossagDelete
+            // 
+            this.btnLatvanyossagDelete.Location = new System.Drawing.Point(502, 272);
+            this.btnLatvanyossagDelete.Name = "btnLatvanyossagDelete";
+            this.btnLatvanyossagDelete.Size = new System.Drawing.Size(163, 23);
+            this.btnLatvanyossagDelete.TabIndex = 26;
+            this.btnLatvanyossagDelete.Text = "Töröl";
+            this.btnLatvanyossagDelete.UseVisualStyleBackColor = true;
+            this.btnLatvanyossagDelete.Click += new System.EventHandler(this.btnLatvanyossagDelete_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.btnLatvanyossagDelete);
+            this.Controls.Add(this.tbLatvanyossagLeirasModosit);
+            this.Controls.Add(this.btnLatvanyossagModosit);
+            this.Controls.Add(this.nudLatvanyossagArModosit);
+            this.Controls.Add(this.tbLatvanyossagNevModosit);
             this.Controls.Add(this.nudModositVarosLakossag);
             this.Controls.Add(this.btnModosit);
             this.Controls.Add(this.tbModositVarosNev);
             this.Controls.Add(this.lbLatvanyossagok);
             this.Controls.Add(this.btn_varos_delete);
-            this.Controls.Add(this.tb_varos_delete);
             this.Controls.Add(this.lbVarosok);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -266,11 +320,12 @@
             this.Controls.Add(this.varos_lakossag);
             this.Controls.Add(this.varos_nev);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LatvanyossagokApp";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.varos_lakossag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.latvanyossag_ar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudModositVarosLakossag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLatvanyossagArModosit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,12 +348,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lbVarosok;
-        private System.Windows.Forms.TextBox tb_varos_delete;
         private System.Windows.Forms.Button btn_varos_delete;
         private System.Windows.Forms.ListBox lbLatvanyossagok;
         private System.Windows.Forms.TextBox tbModositVarosNev;
         private System.Windows.Forms.Button btnModosit;
         private System.Windows.Forms.NumericUpDown nudModositVarosLakossag;
+        private System.Windows.Forms.TextBox tbLatvanyossagLeirasModosit;
+        private System.Windows.Forms.Button btnLatvanyossagModosit;
+        private System.Windows.Forms.NumericUpDown nudLatvanyossagArModosit;
+        private System.Windows.Forms.TextBox tbLatvanyossagNevModosit;
+        private System.Windows.Forms.Button btnLatvanyossagDelete;
     }
 }
 
